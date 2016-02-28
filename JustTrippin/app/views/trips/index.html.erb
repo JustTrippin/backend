@@ -8,14 +8,9 @@
   <div class="row">
     <div class="col-md-4">
 
-<!--       <select class="form-control">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-      </select> -->
       <img src="../../../assets/just_trippin.png">
 
-      <form>
+      <form action="/search" method="post">
         <div class="form-group">
           <label for="Airport">Airport</label>
           <input type="text" class="form-control" placeholder="Airport">
@@ -25,11 +20,11 @@
           <input type="text" class="form-control" placeholder="Price Range">
         </div>
         <div class="form-group">
-          <label for="Region">Trips To:</label> 
+          <label for="Region">Trips To:</label>
           <input id="disabledInput" type="text" class="regionSelect form-control" placeholder="Click Map to Select Region" disabled>
         </div>
         <br>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" id="regionSubmit" class="btn btn-default" disabled>Submit</button>
       </form>
     </div>
   </div>
@@ -40,7 +35,7 @@
 <div><img src="../../../assets/regions_map.png" alt="" usemap="#Map" />
 
 <map name="Map" id="Map">
-    <area id="westcoast" value="West Coast - San Francisco, Oakland, Los Angeles, Portland, Seattle" class="regions" alt="" title="" href="#" shape="poly" coords="29,3,29,8,29,11,29,18,30,23,29,28,27,36,26,40,24,45,21,51,19,57,15,63,13,68,12,74,11,81,11,88,7,94,5,99,6,102,6,110,5,115,6,118,8,123,9,129,11,130,14,129,14,133,11,133,11,137,12,140,15,142,14,148,14,153,16,157,19,162,19,166,20,173,22,174,26,177,28,177,31,181,34,183,38,186,42,190,44,193,47,197,47,200,47,206,52,206,59,206,65,206,68,208,71,211,73,207,74,200,77,196,79,193,77,187,77,179,39,123,46,87,73,93,79,67,78,64,83,57,86,52,84,45,85,33,89,25,90,18,90,13,48,2" />
+    <area id="westcoast" value="San Francisco, Oakland, Los Angeles, Portland, Seattle" class="regions" alt="" title="" href="#" shape="poly" coords="29,3,29,8,29,11,29,18,30,23,29,28,27,36,26,40,24,45,21,51,19,57,15,63,13,68,12,74,11,81,11,88,7,94,5,99,6,102,6,110,5,115,6,118,8,123,9,129,11,130,14,129,14,133,11,133,11,137,12,140,15,142,14,148,14,153,16,157,19,162,19,166,20,173,22,174,26,177,28,177,31,181,34,183,38,186,42,190,44,193,47,197,47,200,47,206,52,206,59,206,65,206,68,208,71,211,73,207,74,200,77,196,79,193,77,187,77,179,39,123,46,87,73,93,79,67,78,64,83,57,86,52,84,45,85,33,89,25,90,18,90,13,48,2" />
     <area id="mountain" value="Las Vegas, Salt Lake City, Denver, Boise" class="regions" alt="" title="" href="#" shape="poly" coords="92,12,116,18,153,24,179,27,194,29,187,123,204,125,201,173,191,173,134,166,88,159,85,169,81,169,77,177,42,123,48,89,73,95,82,64,89,53,87,40" />
     <area id="southwest" value="Phoenix, Albuquerque, Austin, Dallas, Houston, San Antonio" class="regions" alt="" title="" href="#" shape="poly" coords="220,182,191,180,191,175,134,168,89,161,87,170,82,171,79,177,78,182,79,187,81,190,81,193,78,198,76,201,74,205,73,212,103,231,132,237,136,230,150,233,153,230,158,242,163,246,167,255,171,264,177,267,182,270,184,271,190,262,197,262,204,264,209,272,213,280,218,286,222,293,223,300,227,303,234,307,242,311,247,310,244,292,249,286,257,279,264,275,269,271,273,269,278,264,282,264,282,258,284,251,283,245,279,237,279,218,273,216,269,213,262,213,257,214,253,213,249,214,243,212,238,212,233,211,230,210,225,206,221,205,219,204" />
     <area id="heartland" value="St. Louis, Oklahoma City, Kansas City, Minneapolis, Des Moines, Lincoln" class="regions" alt="" title="" href="#" shape="poly" coords="198,29,248,32,266,32,271,34,281,37,290,38,295,41,299,41,304,41,309,42,306,45,302,47,299,50,292,55,289,60,289,63,287,67,287,72,286,76,286,79,289,81,294,89,296,90,298,95,301,103,305,107,308,112,310,115,309,119,306,119,304,120,304,122,303,130,300,133,298,138,303,144,304,147,306,149,308,150,310,150,313,152,311,156,311,162,315,164,319,165,320,168,322,170,322,175,322,178,321,183,319,185,315,185,316,180,271,182,273,213,264,210,252,209,230,204,222,199,223,179,196,178,206,173,206,126,190,119" />
