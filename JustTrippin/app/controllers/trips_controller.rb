@@ -25,7 +25,7 @@ class TripsController < ApplicationController
       )
 
 
-    render json: @response
+    render "trips/index"
 
   end
 end
