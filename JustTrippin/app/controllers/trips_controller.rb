@@ -30,4 +30,4 @@ class TripsController < ApplicationController
   end
 
 end
->>>>>>> master
+
