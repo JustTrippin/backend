@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :trips
 
 #get 'map' => 'trips#map'
-      get 'map' => "trips#map", as: :map
+    get 'map' => "trips#map", as: :map
 
     get 'pizza' => "trips#pizza", as: :pizza
 
