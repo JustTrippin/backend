@@ -54,18 +54,18 @@ class Trip < ActiveRecord::Base
     fare_items = overview_body["FlightListings"]["AirOfferSummary"]
     @flights = []
     fare_items.each do |item|
-      flight_info = [item["FlightPriceSummary"]["TotalPrice"],
-                    item["FlightItinerarySummary"]["OutboundDepartureAirlineCode"],
-                    item["FlightItinerarySummary"]["OutboundDepartureAirportCode"],
-                    item["FlightItinerarySummary"]["InboundDepartureAirportCode"],
-                    item["FlightItinerarySummary"]["OutboundDepartureTime"],
-                    item["FlightItinerarySummary"]["InboundDepartureTime"],
-                    item["AirProductToken"],
-                    ]
+      flight_info = {price: item["FlightPriceSummary"]["TotalPrice"],
+                    airline: item["FlightItinerarySummary"]["OutboundDepartureAirlineCode"],
+                    origin:item["FlightItinerarySummary"]["OutboundDepartureAirportCode"],
+                    destination:item["FlightItinerarySummary"]["InboundDepartureAirportCode"],
+                    outbound: item["FlightItinerarySummary"]["OutboundDepartureTime"],
+                    inbound: item["FlightItinerarySummary"]["InboundDepartureTime"],
+                    token: item["AirProductToken"][0]
+                    }
       @flights.push(flight_info)
     end
 
-
+    return @flights
   end
 
 end
