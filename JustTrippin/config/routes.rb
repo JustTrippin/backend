@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 #get 'map' => 'trips#map'
       get 'map' => "trips#map", as: :map
 
+    get 'pizza' => "trips#pizza", as: :pizza
+
 
   # Example resource route with options:
   #   resources :products do
