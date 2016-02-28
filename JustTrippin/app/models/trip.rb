@@ -45,7 +45,7 @@ class Trip < ActiveRecord::Base
                 .to_json,
                 :headers => { 'Content-Type' => 'application/json',
                               'Accept' => 'application/json',
-                            'Authorization' => "expedia-apikey key=XoZ3sWgEgfKywboJaS4EvWePDTWsG4ym"
+                            'Authorization' => ENV["EXPEDIA_SECRET_KEY="]
 
                 }
       )
