@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 #get 'map' => 'trips#map'
     get 'map' => "trips#map", as: :map
 
-    get 'search' => "trips#search", as: :search
+    post 'search' => "trips#search", as: :search
     get 'flight' => "trips#flight", as: :flight
 
 

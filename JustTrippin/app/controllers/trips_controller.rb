@@ -6,10 +6,8 @@ class TripsController < ApplicationController
   end
 
   def search
-    trip = Trip.new("SFO", "West", 200)
-    trip.cities("West")
-    @flights = trip.overview
-
+    p params
+    render 'trips/works'
   end
 
   def flight
