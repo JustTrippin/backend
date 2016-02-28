@@ -5,12 +5,14 @@ class TripsController < ApplicationController
 
   end
 
-  def pizza
-    bar = Trip.new("SFO", "West", 200)
-    bar.cities("West")
-    @beast = bar.overview
-    render json: @beast
+  def search
+    p params
+    render 'trips/works'
+  end
 
+  def flight
+    @flights
+    render json: @flights
   end
 
 end

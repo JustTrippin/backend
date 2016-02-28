@@ -19,10 +19,10 @@ $(window).load(function(){
 	$('.regions').click(function(e) {
 		e.preventDefault();
 		var name = $(this).attr('value')
-		debugger
-		$(".regionSelect").attr("placeholder", name)
-	});
+    $(".regionSelect").attr("placeholder", name);
+    $('#regionSubmit').prop('disabled', false);
+	 });
 
 
 
-	});
+});

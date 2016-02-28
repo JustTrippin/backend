@@ -17,7 +17,8 @@ Rails.application.routes.draw do
 #get 'map' => 'trips#map'
     get 'map' => "trips#map", as: :map
 
-    get 'pizza' => "trips#pizza", as: :pizza
+    post 'search' => "trips#search", as: :search
+    get 'flight' => "trips#flight", as: :flight
 
 
   # Example resource route with options:
