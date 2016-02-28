@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(window).load(function(){
+	$('.regions').click(function(e) {
+		e.preventDefault();
+		var name = $(this).attr('value')
+		debugger
+		$(".regionSelect").attr("placeholder", name)
+	});
+
+
+
+	});
