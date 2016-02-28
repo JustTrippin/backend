@@ -1,6 +1,7 @@
 class TripsController < ApplicationController
   def index
-    render 'trips/index'
+
+    render "trips/index"
 
   end
 
