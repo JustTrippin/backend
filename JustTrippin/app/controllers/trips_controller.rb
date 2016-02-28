@@ -28,6 +28,6 @@ class TripsController < ApplicationController
     render json: @response
 
   end
+
 end
-
-
+>>>>>>> master
