@@ -31,3 +31,20 @@
   min-height: 100%;
   min-width: 100%;
 }
+
+.title {
+  padding: 20px 0 80px 0;
+}
+
+.map {
+  margin-top: 10px;
+}
+
+.page {
+  background: url("http://10steps.sg/wp-content/uploads//2012/11/White-christmas-light-background.jpg") no-repeat center center fixed;
+  /*opacity: .5;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
