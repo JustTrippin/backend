@@ -8,3 +8,26 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+.vid-background {
+  opacity: .5;
+  /*position: fixed;*/
+  //top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  /*background: url(../images/paper.jpg) no-repeat;*/
+  background-size: cover;
+  overflow: hidden;
+}
+
+.vid {
+  z-index: 100;
+  position: relative;
+  min-height: 100%;
+  min-width: 100%;
+}
